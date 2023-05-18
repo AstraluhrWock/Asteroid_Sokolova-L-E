@@ -8,7 +8,6 @@ namespace Asteroids
         public static IEnemyFactory Factory;
         private Transform _rootPool;
         private Health _health;
-        private Player _player;
         private EnemyMovement _enemyMovement;
 
         public Health Health
@@ -27,8 +26,7 @@ namespace Asteroids
 
         private void Start()
         {
-            _player = FindObjectOfType<Player>();
-            _enemyMovement = new EnemyMovement(_player, this);
+            _enemyMovement = new EnemyMovement(this);
         }
 
         private void Update()
