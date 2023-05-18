@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
-using Asteroids.EnemyPool;
+using Asteroids.ServiceLocator;
 
 namespace Asteroids
 {
     internal sealed class GameStarter : MonoBehaviour
     {
-        private Enemy _enemy;
-        private Player _player;
         private void Start()
         {
             EnemyPool.EnemyPool enemyPool = new EnemyPool.EnemyPool(5);
+            Enemy enemyService = ServiceLocatorMonoBehaviour.GetService<Enemy>();
             var asteroid = enemyPool.GetEnemy("Asteroid");
             asteroid.transform.position = Vector3.one;
             asteroid.gameObject.SetActive(true);
