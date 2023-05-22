@@ -1,3 +1,4 @@
+using Asteroids.Interfaces;
 using UnityEngine;
 
 namespace Asteroids
@@ -8,6 +9,8 @@ namespace Asteroids
         [SerializeField] private float _acceleration;
         [SerializeField] private float _health;
 
+        private readonly IAttack _attack;
+
         private Camera _camera;
         private Ship _ship;
         private Bullet _bullet;
@@ -17,6 +20,16 @@ namespace Asteroids
         {
             get { return _transform; }
             set { _transform = value; }
+        }
+
+        public Player(IAttack attack)
+        {
+            _attack = attack;
+        }
+
+        public void Attack()
+        {
+            _attack.Attack();
         }
 
         private void Start()

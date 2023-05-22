@@ -1,4 +1,4 @@
-namespace Asteroids
+namespace Asteroids.Interfaces
 {
     public interface IMove 
     {

@@ -7,6 +7,7 @@ namespace Asteroids
     {
         private void Start()
         {
+            var player = new Player(new CrossAttack());
             EnemyPool.EnemyPool enemyPool = new EnemyPool.EnemyPool(5);
             Enemy enemyService = ServiceLocatorMonoBehaviour.GetService<Enemy>();
             var asteroid = enemyPool.GetEnemy("Asteroid");
