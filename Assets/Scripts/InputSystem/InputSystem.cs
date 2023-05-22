@@ -5,7 +5,7 @@ namespace Asteroids
     internal class InputSystem
     {
         private Ship _ship;
-        private Bullet _bulletSystem;
+        //private Bullet _bulletSystem;
 
         public void InputSystemSet()
         {

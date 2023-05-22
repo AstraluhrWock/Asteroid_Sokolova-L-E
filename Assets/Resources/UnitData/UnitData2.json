@@ -1,0 +1,21 @@
+  {
+      "unit":
+[
+	{
+         "type":"scout",
+         "health":"100"
+      },
+ 
+   
+	{
+         "type":"armored",
+         "health":"150"
+      },
+
+   {
+         "type":"scout",
+         "health":"50"
+      }
+   
+]
+}
