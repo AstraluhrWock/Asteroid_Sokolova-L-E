@@ -14,10 +14,10 @@ namespace Asteroids
         {
             get
             {
-                /*if (_health.Current <= 0.0f)
+                if (_health.Current <= 0.0f)
                 {
-                    //RemovePool();
-                }*/
+                    MessageBroken.SubscribeDestroyMessage(gameObject.name);
+                }
                 return _health;
             }
             protected set => _health = value; 
@@ -32,6 +32,21 @@ namespace Asteroids
         private void Update()
         {
             _enemyMovement.Execute();
+        }
+
+        private void OnEnable()
+        {
+            MessageBroken.EnemyDestroyerEvent += HandlerEnemyDestroyer;
+        }
+
+        private void OnDisable()
+        {
+            MessageBroken.EnemyDestroyerEvent -= HandlerEnemyDestroyer;
+        }
+
+        private void HandlerEnemyDestroyer(string enemyName)
+        {
+            Debug.Log($"Enemy {enemyName} has been destroyed");
         }
     }
 }
