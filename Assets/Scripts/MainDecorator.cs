@@ -25,8 +25,8 @@ namespace Asteroids
             var muffler = new Muffler(_volumeFireOnMuffler, _barrelPosition, _muffler);
             var aim = new Aim(_aimPosition, _aim);
             ModificationWeapon modificationWeaponMuffler = new ModificationMuffler(muffler, _barrelPositionMuffler.position);
-            ModificationWeapon modificationWeaponAim = new ModificationAim(aim, _aimPosition.position );
             modificationWeaponMuffler.ApplyModification(weapon);
+            ModificationWeapon modificationWeaponAim = new ModificationAim(aim, _aimPosition.position);
             modificationWeaponAim.ApplyModification(weapon);
             _fire = modificationWeaponMuffler;
             _fire = modificationWeaponAim;

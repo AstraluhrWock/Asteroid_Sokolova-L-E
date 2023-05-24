@@ -8,6 +8,8 @@ namespace Asteroids
         [SerializeField] private float _speed;
         [SerializeField] private float _acceleration;
         [SerializeField] private float _health;
+        [SerializeField] private float _power;
+        [SerializeField] private float _defence;
 
         private readonly IAttack _attack;
 
@@ -22,6 +24,23 @@ namespace Asteroids
             set { _transform = value; }
         }
 
+        public float Defence
+        {
+            get {return _defence; }
+            set { _defence = value; }
+        }
+
+        public float Power
+        {
+            get { return _power; }
+            set { _power = value; }
+        }
+
+        public Player(float power, float defence)
+        {
+            _power = power;
+            _defence = defence;
+        }
         public Player(IAttack attack)
         {
             _attack = attack;
