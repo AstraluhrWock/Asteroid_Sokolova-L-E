@@ -1,14 +1,19 @@
 ﻿using Asteroids.Interfaces;
 using UnityEngine;
+using System;
 
 namespace Asteroids
 {
-    internal abstract class Enemy : MonoBehaviour
+    internal abstract class Enemy : MonoBehaviour, IHit, IPlayer
     {
-        public static IEnemyFactory Factory;
         private Transform _rootPool;
         private Health _health;
         private EnemyMovement _enemyMovement;
+
+        public static IEnemyFactory Factory;
+        public event Action<float> OnHitChange = delegate (float hit) { };
+
+        public string Name { get; }
 
         public Health Health
         {
@@ -22,6 +27,16 @@ namespace Asteroids
             }
             protected set => _health = value; 
         
+        }
+
+        public void Hit(float damage)
+        {
+            OnHitChange.Invoke(damage);
+        }
+
+        public void Accept(IShipVisitor visitor)
+        {
+            visitor.Visit(this);
         }
 
         private void Start()

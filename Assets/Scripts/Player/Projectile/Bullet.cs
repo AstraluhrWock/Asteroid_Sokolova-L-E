@@ -1,3 +1,4 @@
+using Asteroids.Interfaces;
 using UnityEngine;
 
 namespace Asteroids

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4324842219217057103}
   - component: {fileID: 4485670061869640660}
-  - component: {fileID: 2463211364224576936}
   - component: {fileID: 6871082989965835047}
+  - component: {fileID: 2463211364224576936}
   m_Layer: 0
   m_Name: EnemyShip_Type1
   m_TagString: Untagged
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2463211364224576936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7028057355793848005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66cdd3b5262417f44a766c1232627e9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &6871082989965835047
 Rigidbody2D:
   serializedVersion: 4
@@ -119,3 +107,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2463211364224576936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7028057355793848005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66cdd3b5262417f44a766c1232627e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

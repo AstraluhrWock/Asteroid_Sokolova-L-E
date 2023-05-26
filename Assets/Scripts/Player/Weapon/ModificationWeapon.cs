@@ -1,4 +1,6 @@
-﻿namespace Asteroids
+﻿using Asteroids.Interfaces;
+
+namespace Asteroids
 {
     internal abstract class ModificationWeapon : IFire
     {
